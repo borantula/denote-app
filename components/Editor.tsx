@@ -35,6 +35,7 @@ const Editor: FC = () => {
           margin: 1rem 0;
           line-height: 2rem;
           letter-spacing: 1px;
+          border: 1px solid rgba(229, 229, 229, 0.3);
         }
       `}</style>
     </>
