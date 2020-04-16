@@ -8,7 +8,14 @@ const Editor: FC = () => {
 
   useEffect(() => {
     editorContainer.current.focus();
-    editorContainer.current.innerText = content;
+    let finalContent = content;
+    console.log(content, content.match(/-\[]/g));
+    finalContent = finalContent.replace(
+      /-\[]/g,
+      '<input type="checkbox" class="editor-checkbox">'
+    );
+
+    editorContainer.current.innerHTML = finalContent;
   }, []);
 
   return (
@@ -19,8 +26,20 @@ const Editor: FC = () => {
         contentEditable="true"
         tabIndex={1}
         className="editor"
+        onClick={(e) => {
+          const isCheckbox = (e.target as HTMLInputElement).type === "checkbox";
+          if (isCheckbox) {
+            const el = e.target as HTMLInputElement;
+            if (el.checked) {
+              el.setAttribute("checked", "checked");
+              let text = e.currentTarget.innerHTML;
+              setValue(text);
+            }
+          }
+        }}
         onKeyUpCapture={(e) => {
-          setValue(e.currentTarget.innerText);
+          let text = e.currentTarget.innerHTML;
+          setValue(text);
         }}
       ></div>
       <style jsx>{`

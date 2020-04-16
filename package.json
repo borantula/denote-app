@@ -9,6 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@reasonink/clack": "^0.0.3",
     "dayjs": "^1.8.24",
     "next": "9.3.4",
     "react": "16.13.1",

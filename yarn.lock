@@ -933,6 +933,11 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@reasonink/clack@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@reasonink/clack/-/clack-0.0.3.tgz#ae4a4c78dc7f3fc3d89525f226d8790f1c20db34"
+  integrity sha512-opUdR4IsmeMFiYjGRrCW61xAQn7TD+prRPkuTDZzi9t+TDhrRDUlr/ZhqjeHMpV/CBxSeyPpzJMPgK5Y98dh/A==
+
 "@types/js-cookie@2.2.6":
   version "2.2.6"
   resolved "https://registry.yarnpkg.com/@types/js-cookie/-/js-cookie-2.2.6.tgz#f1a1cb35aff47bc5cfb05cb0c441ca91e914c26f"
